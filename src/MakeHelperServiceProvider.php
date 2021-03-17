@@ -4,7 +4,7 @@ namespace Arham\MakeHelper;
 
 use Illuminate\Support\ServiceProvider;
 
-class MakeHelperServiceProvicer extends ServiceProvider
+class MakeHelperServiceProvider extends ServiceProvider
 {
 
     public function boot()
