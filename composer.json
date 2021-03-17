@@ -1,6 +1,12 @@
 {
     "name": "arham/makehelper",
     "description": "This package will help you to build crud very fast.",
+    "homepage": "https://github.com/ArhamArham/laravel-makehelper",
+    "keywords": [
+        "laravel",
+        "arham",
+        "makehelper"
+    ],
     "type": "library",
     "authors": [
         {
@@ -8,6 +14,7 @@
             "email": "arhamroshan443@gmail.com"
         }
     ],
+    "license": "TEST",
     "require": {},
     "autoload": {
         "psr-4": {
