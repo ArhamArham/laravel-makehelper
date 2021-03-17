@@ -96,7 +96,8 @@ class HelperCommand extends Command
         }
 
         $this->info('creating controller');
-        Artisan::call("make:controller Admin/{$this->argument('name')} -r");
+        $controller = 'make:controller ' . config('makehelper.paths.controller') . $this->argument('name') . ' -r';
+        Artisan::call($controller);
         $this->info('creating model with factory and migration');
         Artisan::call("make:model {$this->argument('name')} -fm");
     }

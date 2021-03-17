@@ -72,6 +72,7 @@ return [
     "paths" => [
         "blade_views" => "views/admin/",
         "js_views" => "js/components/backend/",
-        "map_js_component" => "js/chunk.js"
+        "map_js_component" => "js/chunk.js",
+        "controller" => ""
     ]
 ];
