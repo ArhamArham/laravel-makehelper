@@ -1,0 +1,49 @@
+<template>
+    <div>
+
+    </div>
+</template>
+
+<script>
+    import _ from 'lodash'
+
+    export default {
+        name: 'Edit',
+        props: ['{{data}}'],
+        data() {
+            return {
+                data: {},
+                required: {}
+            }
+        },
+        methods: {
+            update: _.debounce(function () {
+                for (let input in this.required) {
+                    if (this.data[input] === '') {
+                        this.$alertify.error(`${this.required[input]} is required`);
+                        return false;
+                    }
+                }
+                axios.put(`/admin/{{data}}/${this.data.id}`, this.data)
+                    .then(() => {
+                        this.$alertify.success("{{namespace}} Updated Successfully!");
+                        this.$nextTick(() => {
+                            window.location.href = '/admin/{{data}}';
+                        })
+                    })
+                    .catch(err => {
+                        if (err.response.status === 422) {
+                            let errors = Object.values(err.response.data.errors);
+                            for (let error of errors) {
+                                this.$alertify.error(error[0]);
+                            }
+                        }
+                    })
+            }, 200)
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

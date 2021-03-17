@@ -1,0 +1,12 @@
+<x-admin.layout title="{{namespace}}" heading="{{namespace}}">
+    <div id="backend-app">
+
+        <edit-{{vue}}
+            :{{data}}="{{ ${{data}}->toJson() }}">
+        </edit-{{vue}}>
+
+    </div>
+    <x-slot name="script">
+        <script src="{{asset('js/backend.js')}}"></script>
+    </x-slot>
+</x-admin.layout>

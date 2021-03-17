@@ -1,0 +1,2 @@
+Vue.component('add-{{name}}', () => import(/*webpackChunkName:"{{namespace}}Add"*/'./components/backend/{{vue}}/Add.vue'));
+Vue.component('edit-{{name}}', () => import(/*webpackChunkName:"{{namespace}}Edit"*/'./components/backend/{{vue}}/Edit.vue'));

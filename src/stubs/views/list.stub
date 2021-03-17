@@ -1,0 +1,12 @@
+<x-admin.layout title="{{namespace}}" heading="{{namespace}}">
+    <x-slot name="style">
+        <livewire:styles/>
+    </x-slot>
+
+    <livewire:admin.{{vue}}-list/>
+
+    <x-slot name="script">
+        <livewire:scripts/>
+        <script src="{{asset('backend/assets/CrudListHelper.js')}}"></script>
+    </x-slot>
+</x-admin.layout>

@@ -1,0 +1,24 @@
+{
+    "name": "arham/makehelper",
+    "description": "This package will help you to build crud very fast.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "arhamroshanar",
+            "email": "arhamroshan443@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Arham\\MakeHelper\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arham\\MakeHelper\\MakeHelperServiceProvider"
+            ]
+        }
+    }
+}
